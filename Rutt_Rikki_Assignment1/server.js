@@ -1,10 +1,16 @@
 // Importing the Express.js framework 
 const express = require('express');
+
 // Create an instance of the Express application called "app"
 // app will be used to define routes, handle requests, etc
 const app = express();
 
+//Require the querystring middleware
+//Used to convert JacaScript into a URL query string
+const qs = require('querystring');
+
 // Monitor all requests regardless of their method (GET, POST, PUT, etc) and their path (URL)
+//sends message to server console for troubleshooting and monitoing normal activity
 app.all('*', function (request, response, next) {
    console.log(request.method + ' to ' + request.path);
    next();
