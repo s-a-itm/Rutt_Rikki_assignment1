@@ -18,9 +18,15 @@ app.all('*', function (request, response, next) {
 
 /* Import data from a JSON file containing information about products
 __dirname represents the directory of the current module (where server.js is located)
-__dirname + "./products.json" specifies the location of products.json
-*/
-const products = require(__dirname + "./products.json");
+__dirname + "./products.json" specifies the location of products.json*/
+
+//Route all othjer GET request to serve static files from a directory named "public"
+app.use(express.static(__dirname + '/public'));
+
+//start the server listen on port 8080 for incoming http requests
+app.listen(8080, () => console.log(`listening on port 8080`));
+
+const products = require(__dirname + "/products.json");
 
 // Define a route for handling a GET request to a path that matches "./products.js"
 app.get('./products.js', function(request, response, next) {
