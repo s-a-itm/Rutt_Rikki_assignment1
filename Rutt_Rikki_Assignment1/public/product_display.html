@@ -46,9 +46,22 @@
             </div>
         </header>
         <!-- Section-->
-        <section class="py-5">
-            <div class="container px-4 px-lg-5 mt-5">
-                <div class="row gx-4 gx-lg-5 row-cols-3 row-cols-md-3 row-cols-xl-3 justify-content-center">
+        <div class="container">
+            <br>
+            <br>
+            <h3 id="errMsg" style="color: #ff2e2e;"></h3>
+            <br>
+            <!-- PRODUCT CARDS-->
+            <form action="/process_purchase" method="POST" name="qty_form" class="qty_form">
+                <div class="row"></div>
+                <input type="submit" value="Purchase" class="sm-button highlight">
+            </form>
+        </div>
+        <br>
+        <br>
+    
+        <!-- JavaScript -->
+        <script src="./products_display.js"></script>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Rikki Rutt 2023</p></div>
@@ -56,6 +69,6 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script type="text/javascript" src="./products_display.js"></script>
+        <!--script src="js/scripts.js"></script-->
     </body>
 </html>
